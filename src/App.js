@@ -3,7 +3,7 @@ import react,{useState} from 'react';
  //line 3 to 13 is custom hooks
 function useFormInputs(InitialValue){
   const [value,setValue]=useState('');
-}
+
 function handleChange(e){
   setValue(e.target.value);
 }
@@ -11,11 +11,11 @@ return{
   value,
   onChange:handleChange,
 };//line 13
-
+}
 
 function LoginFrom(){
   const email=useFormInputs('');
-  const password=useFromInputs('');
+  const password=useFormInputs('');
 
 
 // function LoginFrom(){
@@ -60,13 +60,13 @@ return(
     </p>
   </form>
 )
-
+}
 // 
 function SignupForm(){
   const email=useFormInputs('');
   const password=useFormInputs('');
-  const confirmPassword=useFromInputs('');
-}
+  const confirmPassword=useFormInputs('');
+
 
 
 
@@ -88,6 +88,8 @@ return(
       /> */}
       <input type="password" {...password}/>
     </div>
+    <br/>
+    <div> Confirm Password</div>
     <div>
       {/* <input
       type="password"
